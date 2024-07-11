@@ -1,34 +1,21 @@
 /* styles.css */
-.image-container img {
-    width: 100%;
-    height: auto;
-    background-size: cover;
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.header-user {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body.dark-mode {
+    background-color: black;
+    color: white;
 }
 
-.masthead {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+/* Estilos específicos para otros elementos */
+.dark-mode .navigation-bar, .dark-mode .masthead {
+    background-color: #333;
+    color: white;
 }
 
-.navigation-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f8f8f8;
-}
-
-.night-mode label {
-    cursor: pointer;
+.dark-mode .image-container img {
+    filter: brightness(0.8);
 }
